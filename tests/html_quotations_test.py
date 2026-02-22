@@ -6,7 +6,8 @@ from __future__ import absolute_import
 import re
 from unittest.mock import Mock, patch
 
-from nose.tools import assert_false, assert_true, eq_, ok_
+# Pytest replacements for nose.tools (imported from tests module)
+from tests import eq_, ok_, assert_true, assert_false  # noqa: F401
 
 from tests.fixtures import (OLK_SRC_BODY_SECTION,
                             REPLY_QUOTATIONS_SHARE_BLOCK,

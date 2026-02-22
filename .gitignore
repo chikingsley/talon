@@ -1,59 +1,57 @@
+# Python
+__pycache__/
 *.py[cod]
-
-# C extensions
+*$py.class
 *.so
 
-# Packages
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Build artifacts
 *.egg
-*.egg-info
-dist
-build
-eggs
-parts
-bin
-var
-sdist
-develop-eggs
-.installed.cfg
-lib
-lib64
+*.egg-info/
+dist/
+build/
+.build/
+eggs/
+*.whl
 
-# Installer logs
-pip-log.txt
-
-# Unit test / coverage reports
+# Testing & coverage
+.pytest_cache/
 .coverage
-.tox
+coverage.xml
+htmlcov/
+.tox/
 nosetests.xml
 
-# Translations
-*.mo
+# Environment & secrets
+.env
+.env.*
 
-# Mr Developer
-.mr.developer.cfg
-.project
-.pydevproject
+# uv
+uv.lock
 
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
 *~
-\#*\#
-/.emacs.desktop
-/.emacs.desktop.lock
-.elc
-.idea
-.cache
-auto-save-list
-tramp
-.\#*
 
-# Org-mode
-.org-id-locations
-*_archive
-
-# Trial temp
-_trial_temp
-
-# OSX
+# OS
 .DS_Store
+Thumbs.db
 
-# vim-backup
+# Emacs
+\#*\#
+.\#*
+auto-save-list/
+
+# Misc
 *.bak
+*.log
+
+# Evaluation results
+evals/results/

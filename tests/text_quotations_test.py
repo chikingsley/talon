@@ -761,7 +761,7 @@ def test_standard_replies():
                     reply_text = f.read().strip()
             else:
                 reply_text = 'Hello'
-            yield eq_, reply_text, stripped_text, \
+            assert reply_text == stripped_text, \
                 "'%(reply)s' != %(stripped)s for %(fn)s" % \
                 {'reply': reply_text, 'stripped': stripped_text,
                  'fn': filename}

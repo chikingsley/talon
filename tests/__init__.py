@@ -1,8 +1,33 @@
 from __future__ import absolute_import
-from nose.tools import *
-from mock import *
+from unittest.mock import *
 
 import talon
+
+# Pytest replacements for nose.tools
+def eq_(a, b, msg=None):
+    assert a == b, msg
+
+def ok_(x, msg=None):
+    assert x, msg
+
+def assert_true(x, msg=None):
+    assert x, msg
+
+def assert_false(x, msg=None):
+    assert not x, msg
+
+def assert_in(member, container, msg=None):
+    assert member in container, msg
+
+def assert_not_in(member, container, msg=None):
+    assert member not in container, msg
+
+def assert_raises(exception, callable_obj, *args, **kwargs):
+    try:
+        callable_obj(*args, **kwargs)
+    except exception:
+        return
+    raise AssertionError(f"{exception} not raised")
 
 
 EML_MSG_FILENAME = "tests/fixtures/standard_replies/yahoo.eml"
