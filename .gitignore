@@ -18,6 +18,9 @@ build/
 eggs/
 *.whl
 
+# Linting
+.ruff_cache/
+
 # Testing & coverage
 .pytest_cache/
 .coverage
@@ -29,6 +32,7 @@ nosetests.xml
 # Environment & secrets
 .env
 .env.*
+!.env.example
 
 # uv
 uv.lock
